@@ -32,7 +32,7 @@ body {
 	margin: 40px;
 	line-height: 1.6;
 	max-width: 700px;
-  margin: 0 auto;
+	margin: 0 auto;
 	> div {
 		margin-bottom: 28px;
 	}
@@ -49,28 +49,6 @@ h1 {
 		rgba(232, 233, 148, 1) 98%
 	);
 }
-.subtitle {
-	@extend .alef-bold;
-	text-align: center;
-	background: salmon;
-	font-style: italic;
-	color: white;
-	width: fit-content;
-	margin: 0 auto 2rem auto;
-	padding: 4px;
-	transition: all 0.2s ease-in;
-}
-.subtitle:hover,
-.stretch-o {
-	// height: 1.12ch;
-	// width: calc(var(--stretch) * 1.16ch);
-	// translate: 0 -0.01ch;
-	// border-radius: 1ch;
-	// transition: width 0.2s;
-	// position: relative;
-	width: 100%;
-}
-
 h2 {
 	@extend .alef-bold;
 	color: #4778d4;
@@ -114,7 +92,7 @@ ul {
 
 .step-instruction {
 	display: flex;
-	align-items: center;
+	// align-items: center;
 	gap: $step-padding;
 }
 
@@ -123,15 +101,14 @@ ul {
 	overflow: hidden;
 }
 
-.gif-placeholder,
-.step-instruction .gif-placeholder {
+.gif-placeholder {
+	flex: 1;
 	height: auto;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	gap: 6px;
 }
-.step-instruction img,
 .gif-placeholder img {
 	width: 100%;
 	object-fit: fill; /* optional: keep image contained */
@@ -139,23 +116,14 @@ ul {
 }
 
 .step p {
+	flex: 1;
 	@extend .alef-regular;
-	z-index: 1; // above the drop-cap
-	border: 2px solid $primary-color;
-	border-right: 18px solid $primary-color;
 	padding: 1rem;
 	min-width: 160px;
 	align-self: stretch;
-	margin: 0; // vertical rhythm
+	margin: 0;
 	background-color: salmon;
 	color: white;
-}
-
-.step-instruction p::first-letter {
-	// @extend .alef-bold;
-	// font-size: 1.6rem;
-	// line-height: 0.4;
-	// margin-left: 1px;
 }
 
 .logo-title {
@@ -190,4 +158,16 @@ ul {
 	height: 4px;
 	background: #2ecc71;
 	border-radius: 2px;
+}
+
+.subtitle {
+	@extend .alef-bold;
+	text-align: center;
+	background: salmon;
+	font-style: italic;
+	color: white;
+	width: fit-content;
+	margin: 0 auto 2rem auto;
+	padding: 4px;
+	transition: all 0.2s ease-in;
 }
