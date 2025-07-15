@@ -5,7 +5,7 @@
   font-style: normal;
 }
 
-.alef-bold, h2, .subtitle, h1 {
+.alef-bold, .subtitle, h2, h1 {
   font-family: "Alef", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -33,22 +33,6 @@ h1 {
   text-align: center;
   background: #eeaeca;
   background: linear-gradient(140deg, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 66%, rgb(232, 233, 148) 98%);
-}
-
-.subtitle {
-  text-align: center;
-  background: salmon;
-  font-style: italic;
-  color: white;
-  width: fit-content;
-  margin: 0 auto 2rem auto;
-  padding: 4px;
-  transition: all 0.2s ease-in;
-}
-
-.subtitle:hover,
-.stretch-o {
-  width: 100%;
 }
 
 h2 {
@@ -93,7 +77,6 @@ ul li::before {
 
 .step-instruction {
   display: flex;
-  align-items: center;
   gap: 1rem;
 }
 
@@ -102,8 +85,8 @@ ul li::before {
   overflow: hidden;
 }
 
-.gif-placeholder,
-.step-instruction .gif-placeholder {
+.gif-placeholder {
+  flex: 1;
   height: auto;
   overflow: hidden;
   display: flex;
@@ -111,7 +94,6 @@ ul li::before {
   gap: 6px;
 }
 
-.step-instruction img,
 .gif-placeholder img {
   width: 100%;
   object-fit: fill; /* optional: keep image contained */
@@ -119,9 +101,7 @@ ul li::before {
 }
 
 .step p {
-  z-index: 1;
-  border: 2px solid salmon;
-  border-right: 18px solid salmon;
+  flex: 1;
   padding: 1rem;
   min-width: 160px;
   align-self: stretch;
@@ -164,6 +144,17 @@ ul li::before {
   height: 4px;
   background: #2ecc71;
   border-radius: 2px;
+}
+
+.subtitle {
+  text-align: center;
+  background: salmon;
+  font-style: italic;
+  color: white;
+  width: fit-content;
+  margin: 0 auto 2rem auto;
+  padding: 4px;
+  transition: all 0.2s ease-in;
 }
 
 /*# sourceMappingURL=styles.css.map */
