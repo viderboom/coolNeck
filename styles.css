@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .alef-regular, .step p, body {
   font-family: "Alef", sans-serif;
   font-weight: 400;
@@ -18,22 +17,22 @@
 }
 
 body {
-  font-size: 1.2em;
+  font-size: 1em;
   background: #f9f9f9;
   color: #272726;
   margin: 40px;
   line-height: 1.6;
   max-width: 780px;
   margin: 0 auto;
+  padding: 1rem;
 }
 body > div {
-  margin-bottom: 28px;
+  margin-bottom: 1rem;
 }
 
 h1 {
   text-align: center;
   background: #eeaeca;
-  background: linear-gradient(140deg, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 66%, rgb(232, 233, 148) 98%);
 }
 
 h2 {
@@ -57,29 +56,35 @@ h3 {
   background: #e8f5e9;
   padding: 1rem;
   border-radius: 8px;
-  margin-bottom: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
-ul li::before {
-  content: "• ";
-  color: #27ae60;
+ul li {
+  color: salmon;
+  font-style: italic;
+  padding: 4px;
 }
 
 .step {
   background: #ffe9e9;
   padding: 1rem;
-  margin-bottom: 1rem;
 }
 
-.step-instruction {
+.step-instructions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+.step-instructions > div {
+  flex: 1;
+  display: flex;
 }
 
 .marg-top {
@@ -98,14 +103,14 @@ ul li::before {
 
 .gif-placeholder img {
   width: 100%;
-  object-fit: fill; /* optional: keep image contained */
-  display: block; /* remove inline spacing */
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .step p {
   flex: 1;
   padding: 1rem;
-  font-size: 48px;
   min-width: 160px;
   align-self: stretch;
   margin: 0;

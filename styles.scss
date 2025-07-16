@@ -6,7 +6,7 @@ $title-bg: orange;
 $title-text: crimson;
 $pink: rgb(115, 14, 51);
 
-$step-padding: 1rem;
+$normal-gap: 1rem;
 
 .alef-regular {
 	font-family: 'Alef', sans-serif;
@@ -26,15 +26,16 @@ $step-padding: 1rem;
 
 body {
 	@extend .alef-regular;
-  font-size: 1.2em;
+	font-size: 1em;
 	background: #f9f9f9;
 	color: #272726;
 	margin: 40px;
 	line-height: 1.6;
 	max-width: 780px;
 	margin: 0 auto;
+	padding: 1rem;
 	> div {
-		margin-bottom: 28px;
+		margin-bottom: $normal-gap;
 	}
 }
 
@@ -42,12 +43,6 @@ h1 {
 	@extend .alef-bold;
 	text-align: center;
 	background: #eeaeca;
-	background: linear-gradient(
-		140deg,
-		rgba(238, 174, 202, 1) 0%,
-		rgba(148, 187, 233, 1) 66%,
-		rgba(232, 233, 148, 1) 98%
-	);
 }
 h2 {
 	@extend .alef-bold;
@@ -55,7 +50,7 @@ h2 {
 	color: $title-text;
 	font-size: 2.4rem;
 	margin: 0; // remove default top/bottom margins
-	margin-bottom: $step-padding;
+	margin-bottom: $normal-gap;
 	width: auto; // let it size to its content
 }
 h3 {
@@ -67,35 +62,39 @@ h3 {
 .intro {
 	text-align: center;
 	background: #e8f5e9;
-	padding: $step-padding;
+	padding: $normal-gap;
 	border-radius: 8px;
-	margin-bottom: 30px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 ul {
+	display: flex;
+	flex-direction: column;
 	list-style: none;
 	padding: 0;
+	margin: 0;
 	li {
-		&::before {
-			content: '• ';
-			color: $accent-color;
-		}
+		color: salmon;
+		font-style: italic;
+		// background-color: salmon;
+		padding: 4px;
 	}
 }
 
 .step {
 	background: #ffe9e9;
-	padding: $step-padding;
-	margin-bottom: $step-padding;
+	padding: $normal-gap;
 }
 
-.step-instruction {
+.step-instructions {
 	display: flex;
-  flex-wrap: wrap;
+	flex-wrap: wrap;
 
-	// align-items: center;
-	gap: $step-padding;
+	gap: $normal-gap;
+	> div {
+		flex: 1;
+		display: flex;
+	}
 }
 
 .marg-top {
@@ -107,21 +106,22 @@ ul {
 	flex: 1;
 	height: auto;
 	overflow: hidden;
+
 	display: flex;
 	flex-direction: column;
 	gap: 6px;
 }
 .gif-placeholder img {
 	width: 100%;
-	object-fit: fill; /* optional: keep image contained */
-	display: block; /* remove inline spacing */
+	height: 100%;
+	object-fit: cover;
+	display: block;
 }
 
 .step p {
 	flex: 1;
 	@extend .alef-regular;
 	padding: 1rem;
-  font-size: 48px;
 	min-width: 160px;
 	align-self: stretch;
 	margin: 0;
