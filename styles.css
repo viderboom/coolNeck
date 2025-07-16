@@ -18,11 +18,12 @@
 }
 
 body {
+  font-size: 1.2em;
   background: #f9f9f9;
-  color: #333;
+  color: #272726;
   margin: 40px;
   line-height: 1.6;
-  max-width: 700px;
+  max-width: 780px;
   margin: 0 auto;
 }
 body > div {
@@ -77,6 +78,7 @@ ul li::before {
 
 .step-instruction {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -103,6 +105,7 @@ ul li::before {
 .step p {
   flex: 1;
   padding: 1rem;
+  font-size: 48px;
   min-width: 160px;
   align-self: stretch;
   margin: 0;

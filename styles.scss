@@ -13,7 +13,6 @@ $step-padding: 1rem;
 	font-weight: 400;
 	font-style: normal;
 }
-
 .alef-bold {
 	font-family: 'Alef', sans-serif;
 	font-weight: 700;
@@ -27,12 +26,12 @@ $step-padding: 1rem;
 
 body {
 	@extend .alef-regular;
-  font-size: 1rem;
+  font-size: 1.2em;
 	background: #f9f9f9;
-	color: #333;
+	color: #272726;
 	margin: 40px;
 	line-height: 1.6;
-	max-width: 700px;
+	max-width: 780px;
 	margin: 0 auto;
 	> div {
 		margin-bottom: 28px;
@@ -93,6 +92,8 @@ ul {
 
 .step-instruction {
 	display: flex;
+  flex-wrap: wrap;
+
 	// align-items: center;
 	gap: $step-padding;
 }
@@ -120,6 +121,7 @@ ul {
 	flex: 1;
 	@extend .alef-regular;
 	padding: 1rem;
+  font-size: 48px;
 	min-width: 160px;
 	align-self: stretch;
 	margin: 0;
